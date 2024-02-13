@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Message</title>
+  <style>
+    body {
+      background-color: black;
+      color: lightpink;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+    #stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    .message-line {
+      font-size: 24px;
+      padding: 20px;
+      display: none;
+      animation: glowing 2s infinite alternate;
+    }
+    @keyframes glowing {
+      from {
+        text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.5);
+      }
+      to {
+        text-shadow: 0 0 20px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.5), 0 0 40px rgba(255,255,255,0.5);
+      }
+    }
+    .question {
+      font-size: 30px;
+      font-weight: bold;
+      display: none;
+    }
+    .option {
+      font-size: 24px;
+      padding: 10px 20px;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Starry sky background -->
+  <pre id="stars">
+    *  .    *    .         *   .        .  *
+ .  *       .     .    *  .      .        .
+       .        .     .    .  *       .       *
+    .    *     .   *     .   .       .   *    .
+*  .    .     .    .   .   .    .  *   .     .
+  </pre>
+
+  <!-- Message lines -->
+  <div id="message-lines">
+    <div class="message-line">My Bub,</div>
+    <div class="message-line">You light up my life like no other, and I just can't help but smile when I think of you. From your adorable quirks to your infectious laughter, you bring so much happiness into my world.</div>
+    <div class="message-line">Having you by my side feels like winning the jackpot every single day. You're not just my girlfriend; you're my partner in crime, my partner in love, and my partner in laughter.</div>
+    <div class="message-line">And you know what? I've been thinking... I'm going to buy you that Porsche you've been eyeing. Because every queen deserves her chariot, and I want to see you cruising in style.</div>
+    <div class="message-line">So here's to us, to our love, and to many more adventures ahead. I love you more than words can say, and I can't wait to see where life takes us next.</div>
+    <div class="message-line">Yours always and forever,</div>
+    <div class="message-line">Dumbfuck</div>
+  </div>
+
+  <!-- Question -->
+  <div class="question" id="valentine-question">Will you be my Valentine?</div>
+
+  <!-- Options -->
+  <div id="options">
+    <div class="option" id="yes-option">Yes</div>
+    <div class="option" id="no-option">No</div>
+    <div id="no-option-message" style="display: none;">That's not an option, my love. You have to choose "Yes" anyway. 💖</div>
+  </div>
+
+  <!-- Images -->
+  <div id="images" style="display: none;">
+    <!-- Mocha Bear holding rose -->
+    <img src="https://i.pinimg.com/originals/7e/71/78/7e71787a6c9a59c1840f93c9539a5d7b.gif" alt="Mocha Bear holding rose" style="max-width: 400px; margin: 20px;">
+    <!-- Milk and Mocha Bear kissing -->
+    <img src="https://media1.tenor.com/images/0f50dc692927c9d722e485ed29db7312/tenor.gif" alt="Milk and Mocha Bear kissing" style="max-width: 400px; margin: 20px;">
+  </div>
+
+  <script>
+    const messageLines = document.querySelectorAll('.message-line');
+    const question = document.getElementById('valentine-question');
+    const options = document.getElementById('options');
+    const yesOption = document.getElementById('yes-option');
+    const noOption = document.getElementById('no-option');
+    const noOptionMessage = document.getElementById('no-option-message');
+    const images = document.getElementById('images');
+
+    function displayMessageLines() {
+      messageLines.forEach((line, index) => {
+        setTimeout(() => {
+          line.style.display = 'block';
+         
 
